@@ -1124,7 +1124,7 @@ Nå kan figuren din kun hoppe dersom den står på en plattform.
 ```ghost
 let mySprite: Sprite = null
 if (mySprite.isHittingTile(CollisionDirection.Left)) {
-	
+    mySprite.setVelocity(50, 50)
 }
 ```
 
