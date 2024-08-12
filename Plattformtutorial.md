@@ -271,7 +271,7 @@ tiles.setCurrentTilemap(tilemap`level1`)
 Klikk på det grå kvadratet og velg verktøyet for å tegne vegger.
 Verktøyet ligger nederst i verktøymenyen på venstre side i editoren, rett over ordet "Gallery".
 Pass også på at knappen "Show walls" øverst i høyre hjørne av editoren er slått på, slik at du ser hva du tegner.
-Tegn mellom 5 og 10 korte streker som skal forestille plattformer rundt omkring på spillbrettet.
+Tegn en strek som går langs hele nederste linje på spillbrettet dit, og 5 til 10 korte streker som skal forestille plattformer rundt omkring på spillbrettet.
 Klikk på "Done" nede i høyre hjørne når du er fornøyd.
 
 ![VeggVerktøy](https://raw.githubusercontent.com/InspiriaSCC/plattformspill/master/assets/WallTool.jpg)
@@ -1129,17 +1129,16 @@ if (mySprite.isHittingTile(CollisionDirection.Left)) {
 ```
 
 ### Steg 13
-Nå kan du endelig få figuren til å hoppe.
-Det gjør du med blokken ``||sprites:set mySprite velocity to vx 50 vy 50||`` fra ``||sprites:Sprites||``-menyen.
+Nå kan du snart få figuren til å hoppe.
+Først trenger du blokken ``||sprites:set mySprite velocity to vx 50 vy 50||`` fra ``||sprites:Sprites||``-menyen.
 Hent den og legg den inn i gapet på ``||logic:if true then||``-blokken.
 Endre vx til 0 og vy til -100. Oppover på skjermen er negativ y-retning, derfor må det stå "-" foran 100.
+Det er ikke sikkert at du får figuren din til å hoppe riktig ennå, fordi det mangler en annen viktig blokk.
 
 ![mySprite hit wall](https://raw.githubusercontent.com/InspiriaSCC/plattformspill/master/assets/SetJumpVelocity.jpg)
 
 ### Steg 14
-Hoppingen fungerer fremdeles ikke helt som tenkt.
-Om du trykker A nå, vil figuren fly oppover til den treffer noe.
-Her må du bruke litt fysikk. Du kan simulere gravitasjon ved å gi figuren din en konstant akselerasjon nedover.
+Nå må du legge til litt fysikk. Du kan simulere gravitasjon ved å gi figuren din en konstant akselerasjon nedover.
 Hent blokken ``||sprites:change mySprite x by 0||`` fra ``|sprites:Sprites||``-menyen og legg den i ``||loops:on start||``.
 
 ```blocks
