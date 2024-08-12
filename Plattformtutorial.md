@@ -7,7 +7,7 @@ Her lærer du å lage et plattformspill, der du må hoppe mellom plattformer for
 ### Steg 2
 Start med å lage et bakgrunnsbilde for spillet ditt. Hent blokken ``||Scene:set background image to||`` fra ``||Scene:Scene||``-menyen og dra den inn i ``||Loops:on start||``-blokken.
 
-```Blocks
+```blocks
 scene.setBackgroundImage(img`
     ................................................................................................................................................................
     ................................................................................................................................................................
@@ -132,3 +132,4 @@ scene.setBackgroundImage(img`
     `)
     ```
     
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
