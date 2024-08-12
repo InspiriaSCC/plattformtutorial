@@ -1121,6 +1121,13 @@ Nå kan figuren din kun hoppe dersom den står på en plattform.
 
 ![mySprite hit wall](https://raw.githubusercontent.com/InspiriaSCC/plattformspill/master/assets/OnButtonA1.jpg)
 
+```ghost
+let mySprite: Sprite = null
+if (mySprite.isHittingTile(CollisionDirection.Left)) {
+	
+}
+```
+
 ### Steg 13
 Nå kan du endelig få figuren til å hoppe.
 Det gjør du med blokken ``||sprites:set mySprite velocity to vx 50 vy 50||`` fra ``||sprites:Sprites||``-menyen.
